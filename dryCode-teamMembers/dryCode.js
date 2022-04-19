@@ -25,7 +25,7 @@ const team = [
 // Instantiated this at the top of the file to be reused
 const rootElement = document.querySelector('#root');
 
-// Turned this into a function to make the code more DRY
+// Turned this into a function to make the code DRY-er
 const renderTeamToDom = () => {
   rootElement.innerHTML = ""
   team.forEach((memberObj) => {
@@ -40,17 +40,20 @@ const renderTeamToDom = () => {
   });
 };
 
-// Renders the Cards to the dom on load
+// Renders the Cards to the DOM on load
 renderTeamToDom();
 
-// User adds a member using a form
-team.push({
+// A user adds a member using a form, and this is the data they inputted
+const newMember = {
   id: 4,
   name: 'Ajax',
   email: 'drt@drt.com',
   favoriteColor: 'blue',
   image: 'https://picsum.photos/200/300',
-});
+}
 
-// Rerender the cards to the DOM after the Data has been updated
+// Adding new member to the team
+team.push(newMember);
+
+// Rerender the cards to the DOM after the datais updated
 renderTeamToDom();

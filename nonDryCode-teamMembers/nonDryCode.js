@@ -37,14 +37,17 @@ team.forEach((memberObj) => {
 </div>`;
 });
 
-// User adds a member using a form
-team.push({
+// A user adds a member using a form, and this is the data they inputted
+const newMember = {
   id: 4,
   name: 'Ajax',
   email: 'drt@drt.com',
   favoriteColor: 'blue',
   image: 'https://picsum.photos/200/300',
-});
+}
+
+// Adding new member to the team
+team.push(newMember);
 
 rootElement.innerHTML = ""
 team.forEach((memberObj) => {
